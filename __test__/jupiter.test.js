@@ -14,6 +14,6 @@ describe('JupiterAge', () => {
     if (jupiterAge > 72) {
       excessJupiterAge = jupiterAge - 72
     }
-    expect(excessJupiterAge).toEqual()
+    expect(excessJupiterAge).toEqual(165)
   })
 })
