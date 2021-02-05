@@ -48,6 +48,6 @@ describe('MarsAge', () => {
       };
     let mars = new Planet(26)
     mars.marsTime()
-    expect(mars).toEqual()
+    expect(mars).toEqual({"age": 48, "excessAge": 0, "lifeExp": 135, "lifeLeft": 87, "time": 1.88})
   })
 })
