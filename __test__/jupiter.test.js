@@ -26,4 +26,28 @@ describe('JupiterAge', () => {
     let jupiterLifeLeft = parseInt(jupiterLifeExp - jupiterAge)
     expect(jupiterLifeLeft).toEqual(616)
   })
+
+  test('It should build the constructor and run all previous math in a condensed form.', () => {
+    function Planet(age, lifeExp, lifeLeft, excessAge) {
+        this.time = 0;
+        this.age = age;
+        this.lifeExp = lifeExp;
+        this.lifeLeft = lifeLeft;
+        this.excessAge = excessAge;
+      }
+      Planet.prototype.jupiterTime = function() {
+        this.time = 11.86;
+        this.age = parseInt(this.age *= this.time);
+        this.lifeExp = parseInt(72 * 11.86)
+        this.lifeLeft = parseInt(this.lifeExp - this.age)
+        if (this.age > this.lifeExp) {
+          this.excessAge = this.age - this.lifeExp
+        } else {
+          this.excessAge = 0
+        }
+      };
+    let jupiter = new Planet(26)
+    jupiter.jupiterTime()
+    expect(jupiter).toEqual()
+  })
 })
