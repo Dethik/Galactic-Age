@@ -1,15 +1,13 @@
 describe('VenusAge', () => {
 
   test('It should build the constructor and run all previous math in a condensed form.', () => {
-    class Planet {
-      constructor() {
+    function Planet() {
         this.time = 0;
         this.age = 0;
         this.lifeExp = 0;
         this.lifeLeft = 0;
         this.excessAge = 0;
       }
-    }
     let venus = new Planet()
     expect(venus).toEqual(venus)
   })
