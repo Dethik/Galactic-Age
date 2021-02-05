@@ -53,6 +53,6 @@ describe('mercAge', () => {
       };
     let mercury = new Planet(26)
     mercury.mercuryTime()
-    expect(mercury).toEqual()
+    expect(mercury).toEqual({"age": 6, "excessAge": 0, "lifeExp": 17, "lifeLeft": 11, "time": 0.24})
   })
 })
