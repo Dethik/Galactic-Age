@@ -59,4 +59,32 @@ describe('mercAge', () => {
     mercury.mercuryTime()
     expect(mercury).toEqual({"age": 6, "excessAge": 0, "lifeExp": 17, "lifeLeft": 11, "time": 0.24})
   })
+
+  test('test outliving life expectation', () => {
+    function Planet(age, lifeExp, lifeLeft, excessAge) {
+        this.time = 0;
+        this.age = age;
+        this.lifeExp = lifeExp;
+        this.lifeLeft = lifeLeft;
+        this.excessAge = excessAge;
+      }
+      Planet.prototype.mercuryTime = function() {
+        this.time = .24;
+        this.age = parseInt(this.age *= this.time);
+        this.lifeExp = parseInt(72 * .24)
+        if (this.lifeExp > this.age) {
+          this.lifeLeft = parseInt(this.lifeExp - this.age)
+        } else {
+          this.lifeLeft = "'You've outlived expectations, keep it up!'"
+        }
+        if (this.age > this.lifeExp) {
+          this.excessAge = this.age - this.lifeExp
+        } else {
+          this.excessAge = 0
+        }
+      };
+    let mercury = new Planet(80)
+    mercury.mercuryTime()
+    expect(mercury).toEqual()
+  })
 })
