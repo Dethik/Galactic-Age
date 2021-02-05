@@ -24,6 +24,6 @@ describe('MarsAge', () => {
     let marsAge = parseInt(age *= marsTime);
     let marsLifeExp = parseInt(72 * 1.88)
     let marsLifeLeft = parseInt(marsLifeExp - marsAge)
-    expect(marsLifeLeft).toEqual()
+    expect(marsLifeLeft).toEqual(98)
   })
 })
