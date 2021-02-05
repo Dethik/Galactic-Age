@@ -67,4 +67,32 @@ describe('VenusAge', () => {
     venus.venusTime()
     expect(venus).toEqual({"age": 16, "excessAge": 0, "lifeExp": 44, "lifeLeft": 28, "time": 0.62})
   })
+
+  test('test outliving life expectation', () => {
+    function Planet(age, lifeExp, lifeLeft, excessAge) {
+        this.time = 0;
+        this.age = age;
+        this.lifeExp = lifeExp;
+        this.lifeLeft = lifeLeft;
+        this.excessAge = excessAge;
+      }
+      Planet.prototype.venusTime = function() {
+        this.time = .24;
+        this.age = parseInt(this.age *= this.time);
+        this.lifeExp = parseInt(72 * .24)
+        if (this.lifeExp > this.age) {
+          this.lifeLeft = parseInt(this.lifeExp - this.age)
+        } else {
+          this.lifeLeft = "'You've outlived expectations, keep it up!'"
+        }
+        if (this.age > this.lifeExp) {
+          this.excessAge = this.age - this.lifeExp
+        } else {
+          this.excessAge = 0
+        }
+      };
+    let venus = new Planet(80)
+    venus.venusTime()
+    expect(venus).toEqual()
+  })
 })
