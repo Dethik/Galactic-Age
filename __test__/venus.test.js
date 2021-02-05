@@ -14,6 +14,6 @@ describe('VenusAge', () => {
     if (venusAge > 72) {
       excessVenusAge = venusAge - 72
     }
-    expect(excessVenusAge).toEqual()
+    expect(excessVenusAge).toEqual(83)
   })
 })
