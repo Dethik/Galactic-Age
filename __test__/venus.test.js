@@ -1,5 +1,33 @@
 describe('VenusAge', () => {
 
+  
+    test('Intake age from user and give them age if they were a Venusite', () => {
+    let age = 20;
+    let venusTime = .62;
+    let venusAge = parseInt(age *= venusTime);
+    expect(venusAge).toEqual(12)
+  })
+
+  test('Intake age, if over 72 years return number of excess', () => {
+    let age = 250;
+    let venusTime = .62;
+    let venusAge = parseInt(age *= venusTime);
+    let excessVenusAge = 0
+    if (venusAge > 72) {
+      excessVenusAge = venusAge - 72
+    }
+    expect(excessVenusAge).toEqual(83)
+  })
+
+  test('Calculate how long someone has left to live on a planet based off their age', () => {
+    let age = 20;
+    let venusTime = .62;
+    let venusAge = parseInt(age *= venusTime);
+    let venusLifeExp = parseInt(72 * .62)
+    let venusLifeLeft = parseInt(venusLifeExp - venusAge)
+    expect(venusLifeLeft).toEqual(32)
+  })
+  
   test('It should build the constructor', () => {
     function Planet() {
         this.time = 0;
@@ -33,33 +61,6 @@ describe('VenusAge', () => {
       };
     let venus = new Planet(26)
     venus.venusTime()
-    expect(venus).toEqual()
+    expect(venus).toEqual({"age": 16, "excessAge": 0, "lifeExp": 44, "lifeLeft": 28, "time": 0.62})
   })
-
-//   test('Intake age from user and give them age if they were a Venusite', () => {
-//     let age = 20;
-//     let venusTime = .62;
-//     let venusAge = parseInt(age *= venusTime);
-//     expect(venusAge).toEqual(12)
-//   })
-
-//   test('Intake age, if over 72 years return number of excess', () => {
-//     let age = 250;
-//     let venusTime = .62;
-//     let venusAge = parseInt(age *= venusTime);
-//     let excessVenusAge = 0
-//     if (venusAge > 72) {
-//       excessVenusAge = venusAge - 72
-//     }
-//     expect(excessVenusAge).toEqual(83)
-//   })
-
-//   test('Calculate how long someone has left to live on a planet based off their age', () => {
-//     let age = 20;
-//     let venusTime = .62;
-//     let venusAge = parseInt(age *= venusTime);
-//     let venusLifeExp = parseInt(72 * .62)
-//     let venusLifeLeft = parseInt(venusLifeExp - venusAge)
-//     expect(venusLifeLeft).toEqual(32)
-//   })
 })
