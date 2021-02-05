@@ -4,6 +4,6 @@ describe('JupiterAge', () => {
     let age = 20;
     let jupiterTime = 11.86;
     let jupiterAge = parseInt(age *= jupiterTime);
-    expect(jupiterAge).toEqual()
+    expect(jupiterAge).toEqual(237)
   })
 })
