@@ -4,6 +4,6 @@ describe('VenusAge', () => {
     let age = 20;
     let venusTime = .62;
     let venusAge = age *= venusTime;
-    expect(venusAge).toEqual()
+    expect(venusAge).toEqual(12.4)
   })
 })

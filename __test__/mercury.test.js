@@ -17,6 +17,6 @@ describe('mercAge', () => {
     if (mercAge > 72) {
       excessAge = mercAge - 72
     }
-    expect(excessAge).toEqual()
+    expect(excessAge).toEqual(24)
   })
 })
