@@ -1,29 +1,53 @@
+import { TestScheduler } from "jest"
+
 describe('VenusAge', () => {
 
-  test('Intake age from user and give them age if they were a Venusite', () => {
-    let age = 20;
-    let venusTime = .62;
-    let venusAge = parseInt(age *= venusTime);
-    expect(venusAge).toEqual(12)
-  })
-
-  test('Intake age, if over 72 years return number of excess', () => {
-    let age = 250;
-    let venusTime = .62;
-    let venusAge = parseInt(age *= venusTime);
-    let excessVenusAge = 0
-    if (venusAge > 72) {
-      excessVenusAge = venusAge - 72
+  test('It should build the constructor and run all previous math in a condensed form.', () => {
+    class Planet {
+      constructor(time, age, lifeExp, lifeLeft, excessAge) {
+        this.time = time
+        this.age = age
+        this.lifeExp = lifeExp
+        this.lifeLeft = lifeLeft
+        this.excessAge = excessAge
+      }
     }
-    expect(excessVenusAge).toEqual(83)
+    let venus = new Planet(26)
+    Planet.prototype.venusTime = function() {
+      time = .62;
+      age = parseInt(this.age *= this.time);
+      lifeExp = parseInt(72 * .62)
+      lifeLeft = parseInt(this.lifeExp - this.age)
+      if (this.age > 72) {
+        excessAge = this.age - 72
+      };
+    };
+    expect(venus).toEqual()
   })
+//   test('Intake age from user and give them age if they were a Venusite', () => {
+//     let age = 20;
+//     let venusTime = .62;
+//     let venusAge = parseInt(age *= venusTime);
+//     expect(venusAge).toEqual(12)
+//   })
 
-  test('Calculate how long someone has left to live on a planet based off their age', () => {
-    let age = 20;
-    let venusTime = .62;
-    let venusAge = parseInt(age *= venusTime);
-    let venusLifeExp = parseInt(72 * .62)
-    let venusLifeLeft = parseInt(venusLifeExp - venusAge)
-    expect(venusLifeLeft).toEqual(32)
-  })
+//   test('Intake age, if over 72 years return number of excess', () => {
+//     let age = 250;
+//     let venusTime = .62;
+//     let venusAge = parseInt(age *= venusTime);
+//     let excessVenusAge = 0
+//     if (venusAge > 72) {
+//       excessVenusAge = venusAge - 72
+//     }
+//     expect(excessVenusAge).toEqual(83)
+//   })
+
+//   test('Calculate how long someone has left to live on a planet based off their age', () => {
+//     let age = 20;
+//     let venusTime = .62;
+//     let venusAge = parseInt(age *= venusTime);
+//     let venusLifeExp = parseInt(72 * .62)
+//     let venusLifeLeft = parseInt(venusLifeExp - venusAge)
+//     expect(venusLifeLeft).toEqual(32)
+//   })
 })
