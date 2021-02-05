@@ -6,7 +6,7 @@ describe('VenusAge', () => {
     let venusAge = parseInt(age *= venusTime);
     expect(venusAge).toEqual(12)
   })
-  
+
   test('Intake age, if over 72 years return number of excess', () => {
     let age = 250;
     let venusTime = .62;
@@ -16,5 +16,14 @@ describe('VenusAge', () => {
       excessVenusAge = venusAge - 72
     }
     expect(excessVenusAge).toEqual(83)
+  })
+
+  test('Calculate how long someone has left to live on a planet based off their age', () => {
+    let age = 20;
+    let venusTime = .62;
+    let venusAge = parseInt(age *= venusTime);
+    let venusLifeExp = parseInt(72 * .62)
+    let venusLifeLeft = parseInt(venusLifeExp - venusAge)
+    expect(venusLifeLeft).toEqual()
   })
 })
