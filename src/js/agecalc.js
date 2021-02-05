@@ -1,5 +1,3 @@
-
-
 export default class Planet {
   constructor(age) {
     this.time = 0;
@@ -53,11 +51,3 @@ Planet.prototype.jupiterTime = function() {
     this.excessAge = 0
   }
 };
-// let jupiter = new Planet(26)
-// let mars = new Planet(26)
-// let venus = new Planet(26)
-// let mercury = new Planet(26)
-// console.log(mercuryTime(mercury))
-// console.log(venusTime(venus))
-// console.log(jupiterTime(jupiter))
-// console.log(marsTime(mars))
