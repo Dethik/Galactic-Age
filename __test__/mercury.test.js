@@ -31,4 +31,28 @@ describe('mercAge', () => {
     let mercLifeLeft = parseInt(mercLifeExp - mercAge)
     expect(mercLifeLeft).toEqual(13)
   })
+
+  test('It should build the constructor and run all previous math in a condensed form.', () => {
+    function Planet(age, lifeExp, lifeLeft, excessAge) {
+        this.time = 0;
+        this.age = age;
+        this.lifeExp = lifeExp;
+        this.lifeLeft = lifeLeft;
+        this.excessAge = excessAge;
+      }
+      Planet.prototype.mercuryTime = function() {
+        this.time = .24;
+        this.age = parseInt(this.age *= this.time);
+        this.lifeExp = parseInt(72 * .24)
+        this.lifeLeft = parseInt(this.lifeExp - this.age)
+        if (this.age > this.lifeExp) {
+          this.excessAge = this.age - this.lifeExp
+        } else {
+          this.excessAge = 0
+        }
+      };
+    let mercury = new Planet(26)
+    mercury.mercuryTime()
+    expect(mercury).toEqual()
+  })
 })
