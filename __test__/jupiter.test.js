@@ -24,6 +24,6 @@ describe('JupiterAge', () => {
     let jupiterAge = parseInt(age *= jupiterTime);
     let jupiterLifeExp = parseInt(72 * 11.86)
     let jupiterLifeLeft = parseInt(jupiterLifeExp - jupiterAge)
-    expect(jupiterLifeLeft).toEqual()
+    expect(jupiterLifeLeft).toEqual(616)
   })
 })
