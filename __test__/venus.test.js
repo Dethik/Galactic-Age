@@ -93,6 +93,6 @@ describe('VenusAge', () => {
       };
     let venus = new Planet(80)
     venus.venusTime()
-    expect(venus).toEqual()
+    expect(venus).toEqual({"age": 19, "excessAge": 2, "lifeExp": 17, "lifeLeft": "'You've outlived expectations, keep it up!'", "time": 0.24})
   })
 })
