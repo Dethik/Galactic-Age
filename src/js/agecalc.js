@@ -5,6 +5,7 @@ function mercuryTime() {
   let mercAge = parseInt(age *= mercTime);
   let excessMercAge = 0;
   let mercLifeExp = parseInt(72 * .24)
+  let mercLifeLeft = parseInt(mercLifeExp - mercAge)
   if (mercAge > 72) {
     excessMercAge = mercAge - 72
   };
