@@ -24,6 +24,6 @@ describe('VenusAge', () => {
     let venusAge = parseInt(age *= venusTime);
     let venusLifeExp = parseInt(72 * .62)
     let venusLifeLeft = parseInt(venusLifeExp - venusAge)
-    expect(venusLifeLeft).toEqual()
+    expect(venusLifeLeft).toEqual(32)
   })
 })
