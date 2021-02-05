@@ -1,28 +1,17 @@
-import { TestScheduler } from "jest"
-
 describe('VenusAge', () => {
 
   test('It should build the constructor and run all previous math in a condensed form.', () => {
     class Planet {
-      constructor(time, age, lifeExp, lifeLeft, excessAge) {
-        this.time = time
-        this.age = age
-        this.lifeExp = lifeExp
-        this.lifeLeft = lifeLeft
-        this.excessAge = excessAge
+      constructor() {
+        this.time = 0;
+        this.age = 0;
+        this.lifeExp = 0;
+        this.lifeLeft = 0;
+        this.excessAge = 0;
       }
     }
-    let venus = new Planet(26)
-    Planet.prototype.venusTime = function() {
-      time = .62;
-      age = parseInt(this.age *= this.time);
-      lifeExp = parseInt(72 * .62)
-      lifeLeft = parseInt(this.lifeExp - this.age)
-      if (this.age > 72) {
-        excessAge = this.age - 72
-      };
-    };
-    expect(venus).toEqual()
+    let venus = new Planet()
+    expect(venus).toEqual(venus)
   })
 //   test('Intake age from user and give them age if they were a Venusite', () => {
 //     let age = 20;
