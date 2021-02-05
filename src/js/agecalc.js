@@ -56,6 +56,9 @@ Planet.prototype.jupiterTime = function() {
   }
 };
 const person = new Planet(27)
+
+// Comment and Uncomment the different functions to change results
+
 person.mercuryTime()
 // person.venusTime()
 // person.marsTime()
