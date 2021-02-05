@@ -20,6 +20,6 @@ describe('mercAge', () => {
 
   test('Calculate expected life duration on planet', () => {
     let mercLifeExp = parseInt(72 * .24)
-    expect(mercLifeExp).toEqual()
+    expect(mercLifeExp).toEqual(17)
   })
 })
