@@ -1,1 +1,1 @@
-// Average Life expectancy ~ 71-72 yrs for world
+// Average Life expectancy ~ 72 yrs for world
