@@ -1,4 +1,4 @@
-export default class Planet {
+class Planet {
   constructor(age) {
     this.time = 0;
     this.age = age;
@@ -44,10 +44,20 @@ Planet.prototype.jupiterTime = function() {
   this.time = 11.86;
   this.age = parseInt(this.age *= this.time);
   this.lifeExp = parseInt(72 * 11.86)
-  this.lifeLeft = parseInt(this.lifeExp - this.age)
+  if (this.lifeExp > this.age) {
+    this.lifeLeft = parseInt(this.lifeExp - this.age)
+  } else {
+    this.lifeLeft = "'You've outlived expectations, keep it up!'"
+  }
   if (this.age > this.lifeExp) {
     this.excessAge = this.age - this.lifeExp
   } else {
     this.excessAge = 0
   }
 };
+const person = new Planet(27)
+person.mercuryTime()
+// person.venusTime()
+// person.marsTime()
+// person.jupiterTime()
+console.log(person.time, person.age, person.lifeExp, person.lifeLeft, person.excessAge)
