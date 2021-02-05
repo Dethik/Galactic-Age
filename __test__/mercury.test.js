@@ -22,4 +22,13 @@ describe('mercAge', () => {
     let mercLifeExp = parseInt(72 * .24)
     expect(mercLifeExp).toEqual(17)
   })
+
+  test('Calculate how long someone has left to live on a planet based off their age', () => {
+    let age = 20;
+    let mercTime = .24;
+    let mercAge = parseInt(age *= mercTime);
+    let mercLifeExp = parseInt(72 * .24)
+    let mercLifeLeft = parseInt(mercLifeExp - mercAge)
+    expect(mercLifeLeft).toEqual()
+  })
 })
