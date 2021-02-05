@@ -17,3 +17,17 @@ function venusTime() {
     excessVenusAge = venusAge - 72
   };
 };
+
+function marsTime() {
+  let age = 50;
+  let marsTime = 1.88;
+  let marsAge = parseInt(age *= marsTime);
+  let excessMarsAge = 0
+  if (marsAge > 72) {
+    excessMarsAge = marsAge - 72
+  }
+}
+
+function jupiterTime() {
+  
+}
