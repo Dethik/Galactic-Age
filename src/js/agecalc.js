@@ -1,4 +1,4 @@
-let age = userInput
+let age = 26
 
 function mercuryTime() {
   let mercTime = .24;
@@ -19,7 +19,6 @@ function venusTime() {
 };
 
 function marsTime() {
-  let age = 50;
   let marsTime = 1.88;
   let marsAge = parseInt(age *= marsTime);
   let excessMarsAge = 0
@@ -29,5 +28,10 @@ function marsTime() {
 }
 
 function jupiterTime() {
-  
+  let jupiterTime = 11.86;
+  let jupiterAge = parseInt(age *= jupiterTime);
+  let excessJupiterAge = 0
+  if (jupiterAge > 72) {
+    excessJupiterAge = jupiterAge - 72
+  }
 }

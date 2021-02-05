@@ -17,4 +17,9 @@ describe('mercAge', () => {
     }
     expect(excessAge).toEqual(24)
   })
+
+  test('Calculate expected life duration on planet', () => {
+    let mercLifeExp = parseInt(72 * .24)
+    expect(mercLifeExp).toEqual()
+  })
 })
