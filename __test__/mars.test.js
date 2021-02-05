@@ -14,6 +14,6 @@ describe('MarsAge', () => {
     if (marsAge > 72) {
       excessMarsAge = marsAge - 72
     }
-    expect(excessMarsAge).toEqual()
+    expect(excessMarsAge).toEqual(22)
   })
 })
