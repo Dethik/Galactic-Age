@@ -1,6 +1,6 @@
 describe('VenusAge', () => {
 
-  test('It should build the constructor and run all previous math in a condensed form.', () => {
+  test('It should build the constructor', () => {
     function Planet() {
         this.time = 0;
         this.age = 0;
@@ -11,6 +11,31 @@ describe('VenusAge', () => {
     let venus = new Planet()
     expect(venus).toEqual(venus)
   })
+
+  test('It should build the constructor and run all previous math in a condensed form.', () => {
+    function Planet(age, lifeExp, lifeLeft, excessAge) {
+        this.time = 0;
+        this.age = age;
+        this.lifeExp = lifeExp;
+        this.lifeLeft = lifeLeft;
+        this.excessAge = excessAge;
+      }
+      Planet.prototype.venusTime = function() {
+        this.time = .62;
+        this.age = parseInt(this.age *= this.time);
+        this.lifeExp = parseInt(72 * .62)
+        this.lifeLeft = parseInt(this.lifeExp - this.age)
+        if (this.age > this.lifeExp) {
+          this.excessAge = this.age - this.lifeExp
+        } else {
+          this.excessAge = 0
+        }
+      };
+    let venus = new Planet(26)
+    venus.venusTime()
+    expect(venus).toEqual()
+  })
+
 //   test('Intake age from user and give them age if they were a Venusite', () => {
 //     let age = 20;
 //     let venusTime = .62;
