@@ -29,6 +29,6 @@ describe('mercAge', () => {
     let mercAge = parseInt(age *= mercTime);
     let mercLifeExp = parseInt(72 * .24)
     let mercLifeLeft = parseInt(mercLifeExp - mercAge)
-    expect(mercLifeLeft).toEqual()
+    expect(mercLifeLeft).toEqual(13)
   })
 })
