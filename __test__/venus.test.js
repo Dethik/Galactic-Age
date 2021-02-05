@@ -6,4 +6,14 @@ describe('VenusAge', () => {
     let venusAge = age *= venusTime;
     expect(venusAge).toEqual(12.4)
   })
+  test('Intake age, if over 72 years return number of excess', () => {
+    let age = 250;
+    let venusTime = .62;
+    let venusAge = age *= venusTime;
+    let excessVenusAge = 0
+    if (venusAge > 72) {
+      excessVenusAge = venusAge - 72
+    }
+    expect(excessVenusAge).toEqual()
+  })
 })
