@@ -80,6 +80,6 @@ describe('JupiterAge', () => {
       };
     let jupiter = new Planet(80)
     jupiter.jupiterTime()
-    expect(jupiter).toEqual()
+    expect(jupiter).toEqual({"age": 948, "excessAge": 95, "lifeExp": 853, "lifeLeft": "'You've outlived expectations, keep it up!'", "time": 11.86})
   })
 })
