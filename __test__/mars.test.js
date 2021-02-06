@@ -64,9 +64,9 @@ describe('MarsAge', () => {
         this.excessAge = excessAge;
       }
       Planet.prototype.marsTime = function() {
-        this.time = .24;
+        this.time = 1.88;
         this.age = parseInt(this.age *= this.time);
-        this.lifeExp = parseInt(72 * .24)
+        this.lifeExp = parseInt(72 * 1.88)
         if (this.lifeExp > this.age) {
           this.lifeLeft = parseInt(this.lifeExp - this.age)
         } else {
@@ -80,6 +80,6 @@ describe('MarsAge', () => {
       };
     let mars = new Planet(80)
     mars.marsTime()
-    expect(mars).toEqual()
+    expect(mars).toEqual({"age": 150, "excessAge": 15, "lifeExp": 135, "lifeLeft": "'You've outlived expectations, keep it up!'", "time": 1.88})
   })
 })
