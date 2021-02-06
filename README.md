@@ -1,17 +1,21 @@
-# (Blank Template)
+# Galactic Calculator
 
-#### (Brief Description of Application)
+#### Calculate the given age upon four different planets.
 
 #### By (Your Name Here)
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* HTML
+* CSS
+* Bootstrap
+* Markdown
+* JavaScript
+* Jquery
 
 ## Description
+
+This project will calculate a given age's life expectancy, current age, how far past the expected age you've gone, and how many years left upon that planet there is to live.
 
 ## Setup/Installation Requirements
 
@@ -42,9 +46,12 @@
 * * *
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* _No known bugs_
 
 ## License
 
+[MIT](LICENSE.txt)
+
 ## Contact Information
+
+Email: Thorgrim88@gmail.com
