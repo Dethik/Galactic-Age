@@ -38,6 +38,6 @@ describe('MarsAge', () => {
   test('test outliving life expectation', () => {
     let mars = new Planet(80)
     mars.marsTime()
-    expect(mars).toEqual({"age": 150, "excessAge": 15, "lifeExp": 135, "lifeLeft": "'You've outlived expectations, keep it up!'", "time": 1.88})
+    expect(mars).toEqual({"age": 150, "excessAge": 15, "lifeExp": 135, "lifeLeft": `You've outlived expectations!`, "time": 1.88})
   })
 })

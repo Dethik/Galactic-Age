@@ -43,6 +43,6 @@ describe('mercAge', () => {
   test('test outliving life expectation', () => {
     let mercury = new Planet(80)
     mercury.mercuryTime()
-    expect(mercury).toEqual({"age": 19, "excessAge": 2, "lifeExp": 17, "lifeLeft": "'You've outlived expectations, keep it up!'", "time": 0.24})
+    expect(mercury).toEqual({"age": 19, "excessAge": 2, "lifeExp": 17, "lifeLeft": `You've outlived expectations!`, "time": 0.24})
   })
 })

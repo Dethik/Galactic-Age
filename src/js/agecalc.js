@@ -14,7 +14,7 @@ Planet.prototype.mercuryTime = function() {
   if (this.lifeExp > this.age) {
     this.lifeLeft = parseInt(this.lifeExp - this.age);
   } else {
-    this.lifeLeft = "'You've outlived expectations, keep it up!'";
+    this.lifeLeft = `You've outlived expectations!`;
   }
   if (this.age > this.lifeExp) {
     this.excessAge = this.age - this.lifeExp;
@@ -29,7 +29,7 @@ Planet.prototype.venusTime = function() {
   if (this.lifeExp > this.age) {
     this.lifeLeft = parseInt(this.lifeExp - this.age);
   } else {
-    this.lifeLeft = "'You've outlived expectations, keep it up!'";
+    this.lifeLeft = `You've outlived expectations!`;
   }
   if (this.age > this.lifeExp) {
     this.excessAge = this.age - this.lifeExp;
@@ -44,7 +44,7 @@ Planet.prototype.marsTime = function() {
   if (this.lifeExp > this.age) {
     this.lifeLeft = parseInt(this.lifeExp - this.age);
   } else {
-    this.lifeLeft = "'You've outlived expectations, keep it up!'";
+    this.lifeLeft = `You've outlived expectations!`;
   }
   if (this.age > this.lifeExp) {
     this.excessAge = this.age - this.lifeExp;
@@ -59,7 +59,7 @@ Planet.prototype.jupiterTime = function() {
   if (this.lifeExp > this.age) {
     this.lifeLeft = parseInt(this.lifeExp - this.age);
   } else {
-    this.lifeLeft = "'You've outlived expectations, keep it up!'";
+    this.lifeLeft = `You've outlived expectations!`;
   }
   if (this.age > this.lifeExp) {
     this.excessAge = this.age - this.lifeExp;

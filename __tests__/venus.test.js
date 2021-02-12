@@ -50,6 +50,6 @@ describe('VenusAge', () => {
   test('test outliving life expectation', () => {
     let venus = new Planet(80)
     venus.venusTime()
-    expect(venus).toEqual({"age": 49, "excessAge": 5, "lifeExp": 44, "lifeLeft": "'You've outlived expectations, keep it up!'", "time": 0.62})
+    expect(venus).toEqual({"age": 49, "excessAge": 5, "lifeExp": 44, "lifeLeft": `You've outlived expectations!`, "time": 0.62})
   })
 })
