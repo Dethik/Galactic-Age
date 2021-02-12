@@ -1,7 +1,8 @@
+import Planet from '../src/js/agecalc.js';
+
 describe('VenusAge', () => {
 
-  
-    test('Intake age from user and give them age if they were a Venusite', () => {
+  test('Intake age from user and give them age if they were a Venusite', () => {
     let age = 20;
     let venusTime = .62;
     let venusAge = parseInt(age *= venusTime);
@@ -27,7 +28,7 @@ describe('VenusAge', () => {
     let venusLifeLeft = parseInt(venusLifeExp - venusAge)
     expect(venusLifeLeft).toEqual(32)
   })
-  
+
   test('It should build the constructor', () => {
     function Planet() {
         this.time = 0;
@@ -41,56 +42,12 @@ describe('VenusAge', () => {
   })
 
   test('It should build the constructor and run all previous math in a condensed form.', () => {
-    function Planet(age, lifeExp, lifeLeft, excessAge) {
-        this.time = 0;
-        this.age = age;
-        this.lifeExp = lifeExp;
-        this.lifeLeft = lifeLeft;
-        this.excessAge = excessAge;
-      }
-      Planet.prototype.venusTime = function() {
-        this.time = .62;
-        this.age = parseInt(this.age *= this.time);
-        this.lifeExp = parseInt(72 * .62)
-        if (this.lifeExp > this.age) {
-          this.lifeLeft = parseInt(this.lifeExp - this.age)
-        } else {
-          this.lifeLeft = "'You've outlived expectations, keep it up!'"
-        }
-        if (this.age > this.lifeExp) {
-          this.excessAge = this.age - this.lifeExp
-        } else {
-          this.excessAge = 0
-        }
-      };
     let venus = new Planet(26)
     venus.venusTime()
     expect(venus).toEqual({"age": 16, "excessAge": 0, "lifeExp": 44, "lifeLeft": 28, "time": 0.62})
   })
 
   test('test outliving life expectation', () => {
-    function Planet(age, lifeExp, lifeLeft, excessAge) {
-        this.time = 0;
-        this.age = age;
-        this.lifeExp = lifeExp;
-        this.lifeLeft = lifeLeft;
-        this.excessAge = excessAge;
-      }
-      Planet.prototype.venusTime = function() {
-        this.time = .62;
-        this.age = parseInt(this.age *= this.time);
-        this.lifeExp = parseInt(72 * .62)
-        if (this.lifeExp > this.age) {
-          this.lifeLeft = parseInt(this.lifeExp - this.age)
-        } else {
-          this.lifeLeft = "'You've outlived expectations, keep it up!'"
-        }
-        if (this.age > this.lifeExp) {
-          this.excessAge = this.age - this.lifeExp
-        } else {
-          this.excessAge = 0
-        }
-      };
     let venus = new Planet(80)
     venus.venusTime()
     expect(venus).toEqual({"age": 49, "excessAge": 5, "lifeExp": 44, "lifeLeft": "'You've outlived expectations, keep it up!'", "time": 0.62})

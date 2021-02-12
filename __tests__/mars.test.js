@@ -1,3 +1,5 @@
+import Planet from '../src/js/agecalc.js';
+
 describe('MarsAge', () => {
 
   test('Intake age from user and give them age if they were a Martian', () => {
@@ -28,56 +30,12 @@ describe('MarsAge', () => {
   })
 
   test('It should build the constructor and run all previous math in a condensed form.', () => {
-    function Planet(age, lifeExp, lifeLeft, excessAge) {
-        this.time = 0;
-        this.age = age;
-        this.lifeExp = lifeExp;
-        this.lifeLeft = lifeLeft;
-        this.excessAge = excessAge;
-      }
-      Planet.prototype.marsTime = function() {
-        this.time = 1.88;
-        this.age = parseInt(this.age *= this.time);
-        this.lifeExp = parseInt(72 * 1.88)
-        if (this.lifeExp > this.age) {
-          this.lifeLeft = parseInt(this.lifeExp - this.age)
-        } else {
-          this.lifeLeft = "'You've outlived expectations, keep it up!'"
-        }
-        if (this.age > this.lifeExp) {
-          this.excessAge = this.age - this.lifeExp
-        } else {
-          this.excessAge = 0
-        }
-      };
     let mars = new Planet(26)
     mars.marsTime()
     expect(mars).toEqual({"age": 48, "excessAge": 0, "lifeExp": 135, "lifeLeft": 87, "time": 1.88})
   })
 
   test('test outliving life expectation', () => {
-    function Planet(age, lifeExp, lifeLeft, excessAge) {
-        this.time = 0;
-        this.age = age;
-        this.lifeExp = lifeExp;
-        this.lifeLeft = lifeLeft;
-        this.excessAge = excessAge;
-      }
-      Planet.prototype.marsTime = function() {
-        this.time = 1.88;
-        this.age = parseInt(this.age *= this.time);
-        this.lifeExp = parseInt(72 * 1.88)
-        if (this.lifeExp > this.age) {
-          this.lifeLeft = parseInt(this.lifeExp - this.age)
-        } else {
-          this.lifeLeft = "'You've outlived expectations, keep it up!'"
-        }
-        if (this.age > this.lifeExp) {
-          this.excessAge = this.age - this.lifeExp
-        } else {
-          this.excessAge = 0
-        }
-      };
     let mars = new Planet(80)
     mars.marsTime()
     expect(mars).toEqual({"age": 150, "excessAge": 15, "lifeExp": 135, "lifeLeft": "'You've outlived expectations, keep it up!'", "time": 1.88})

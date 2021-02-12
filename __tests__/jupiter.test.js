@@ -1,5 +1,6 @@
-describe('JupiterAge', () => {
+import Planet from '../src/js/agecalc.js';
 
+describe('JupiterAge', () => {
   test('Intake age from user and give them age if they were a Jupitonian', () => {
     let age = 20;
     let jupiterTime = 11.86;
@@ -28,56 +29,12 @@ describe('JupiterAge', () => {
   })
 
   test('It should build the constructor and run all previous math in a condensed form.', () => {
-    function Planet(age, lifeExp, lifeLeft, excessAge) {
-        this.time = 0;
-        this.age = age;
-        this.lifeExp = lifeExp;
-        this.lifeLeft = lifeLeft;
-        this.excessAge = excessAge;
-      }
-      Planet.prototype.jupiterTime = function() {
-        this.time = 11.86;
-        this.age = parseInt(this.age *= this.time);
-        this.lifeExp = parseInt(72 * 11.86)
-        if (this.lifeExp > this.age) {
-          this.lifeLeft = parseInt(this.lifeExp - this.age)
-        } else {
-          this.lifeLeft = "'You've outlived expectations, keep it up!'"
-        }
-        if (this.age > this.lifeExp) {
-          this.excessAge = this.age - this.lifeExp
-        } else {
-          this.excessAge = 0
-        }
-      };
     let jupiter = new Planet(26)
     jupiter.jupiterTime()
     expect(jupiter).toEqual({"age": 308, "excessAge": 0, "lifeExp": 853, "lifeLeft": 545, "time": 11.86})
   })
 
   test('test outliving life expectation', () => {
-    function Planet(age, lifeExp, lifeLeft, excessAge) {
-        this.time = 0;
-        this.age = age;
-        this.lifeExp = lifeExp;
-        this.lifeLeft = lifeLeft;
-        this.excessAge = excessAge;
-      }
-      Planet.prototype.jupiterTime = function() {
-        this.time = 11.86;
-        this.age = parseInt(this.age *= this.time);
-        this.lifeExp = parseInt(72 * 11.86)
-        if (this.lifeExp > this.age) {
-          this.lifeLeft = parseInt(this.lifeExp - this.age)
-        } else {
-          this.lifeLeft = "'You've outlived expectations, keep it up!'"
-        }
-        if (this.age > this.lifeExp) {
-          this.excessAge = this.age - this.lifeExp
-        } else {
-          this.excessAge = 0
-        }
-      };
     let jupiter = new Planet(80)
     jupiter.jupiterTime()
     expect(jupiter).toEqual({"age": 948, "excessAge": 95, "lifeExp": 853, "lifeLeft": "'You've outlived expectations, keep it up!'", "time": 11.86})
