@@ -15,9 +15,9 @@ $(document).ready(function() {
     person1.venusTime();
     person2.marsTime();
     person3.jupiterTime();
-    $("#outputMercury").text(`The time scales ${person.time} compared to Earth. If your age is ${person.age} then your life expectancy is ${person.lifeExp} you are at ${person.lifeLeft} and currently ${person.excessAge} years past this age!`);
-    $("#outputVenus").text(`The time scales ${person1.time} compared to Earth. If your age is ${person1.age} then your life expectancy is ${person1.lifeExp} you are at ${person1.lifeLeft} and currently ${person1.excessAge} years past this age!`);
-    $("#outputMars").text(`The time scales ${person2.time} compared to Earth. If your age is ${person2.age} then your life expectancy is ${person2.lifeExp} you are at ${person2.lifeLeft} and currently ${person2.excessAge} years past this age!`);
-    $("#outputJupiter").text(`The time scales ${person3.time} compared to Earth. If your age is ${person3.age} then your life expectancy is ${person3.lifeExp} you are at ${person3.lifeLeft} and currently ${person3.excessAge} years past this age!`);
+    $("#outputMercury").text(`The time scales ${person.time} compared to Earth. If your age is ${age} on earth, your age on Mercury would be ${person.age} then your life expectancy is ${person.lifeExp}, ${person.lifeLeft} ${person.excessAge}`);
+    $("#outputVenus").text(`The time scales ${person1.time} compared to Earth. If your age is ${age} on earth, your age on Venus would be ${person1.age} then your life expectancy is ${person1.lifeExp}, ${person1.lifeLeft} ${person1.excessAge}`);
+    $("#outputMars").text(`The time scales ${person2.time} compared to Earth. If your age is ${age} on earth, your age on Mars would be ${person2.age} then your life expectancy is ${person2.lifeExp}, ${person2.lifeLeft} ${person2.excessAge}`);
+    $("#outputJupiter").text(`The time scales ${person3.time} compared to Earth. If your age is ${age} on earth, your age on Jupiter would be ${person3.age} then your life expectancy is ${person3.lifeExp}, ${person3.lifeLeft} ${person3.excessAge}`);
   });
 });
