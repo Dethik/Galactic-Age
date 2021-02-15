@@ -1,5 +1,12 @@
 import Planet from '../src/js/agecalc.js';
 
+describe('Planet', () => {
+  test('It should make a working constructor.', () => {
+    let mercury = new Planet()
+    expect(mercury).toEqual(mercury)
+  })
+})
+
 describe('mercAge', () => {
 
   test('It should build the constructor and run all previous math in a condensed form.', () => {
