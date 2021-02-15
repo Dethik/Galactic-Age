@@ -5,65 +5,53 @@ export default class Planet {
     this.lifeExp = 0;
     this.lifeLeft = 0;
     this.excessAge = 0;
-  }
-}
-Planet.prototype.mercuryTime = function() {
-  this.time = .24;
-  this.age = parseInt(this.age *= this.time);
-  this.lifeExp = parseInt(72 * .24);
-  if (this.lifeExp > this.age) {
-    this.lifeLeft = parseInt(this.lifeExp - this.age);
-  } else {
-    this.lifeLeft = `You've outlived expectations!`;
-  }
-  if (this.age > this.lifeExp) {
-    this.excessAge = this.age - this.lifeExp;
-  } else {
-    this.excessAge = 0;
-  }
-};
-Planet.prototype.venusTime = function() {
-  this.time = .62;
-  this.age = parseInt(this.age *= this.time);
-  this.lifeExp = parseInt(72 * .62);
-  if (this.lifeExp > this.age) {
-    this.lifeLeft = parseInt(this.lifeExp - this.age);
-  } else {
-    this.lifeLeft = `You've outlived expectations!`;
-  }
-  if (this.age > this.lifeExp) {
-    this.excessAge = this.age - this.lifeExp;
-  } else {
-    this.excessAge = 0;
-  }
-};
-Planet.prototype.marsTime = function() {
-  this.time = 1.88;
-  this.age = parseInt(this.age *= this.time);
-  this.lifeExp = parseInt(72 * 1.88);
-  if (this.lifeExp > this.age) {
-    this.lifeLeft = parseInt(this.lifeExp - this.age);
-  } else {
-    this.lifeLeft = `You've outlived expectations!`;
-  }
-  if (this.age > this.lifeExp) {
-    this.excessAge = this.age - this.lifeExp;
-  } else {
-    this.excessAge = 0;
-  }
-};
-Planet.prototype.jupiterTime = function() {
-  this.time = 11.86;
-  this.age = parseInt(this.age *= this.time);
-  this.lifeExp = parseInt(72 * 11.86);
-  if (this.lifeExp > this.age) {
-    this.lifeLeft = parseInt(this.lifeExp - this.age);
-  } else {
-    this.lifeLeft = `You've outlived expectations!`;
-  }
-  if (this.age > this.lifeExp) {
-    this.excessAge = this.age - this.lifeExp;
-  } else {
-    this.excessAge = 0;
-  }
+  };
+  mercuryTime() {
+    this.time = .24;
+    this.age = parseInt(this.age *= this.time);
+    this.lifeExp = parseInt(72 * .24);
+    if (this.lifeExp > this.age) {
+      let ageLeft = parseInt(this.lifeExp - this.age);
+      this.lifeLeft = `You have ${ageLeft} years left to live!`;
+    } else if (this.age > this.lifeExp) {
+      let ageExcess = this.age - this.lifeExp;
+      this.excessAge = `You've outlived expectations by ${ageExcess} years!`
+    }
+  };
+  venusTime() {
+    this.time = .62;
+    this.age = parseInt(this.age *= this.time);
+    this.lifeExp = parseInt(72 * .62);
+    if (this.lifeExp > this.age) {
+      let ageLeft = parseInt(this.lifeExp - this.age);
+      this.lifeLeft = `You have ${ageLeft} years left to live!`;
+    } else if (this.age > this.lifeExp) {
+      let ageExcess = this.age - this.lifeExp;
+      this.excessAge = `You've outlived expectations by ${ageExcess} years!`
+    }
+  };
+  marsTime() {
+    this.time = 1.88;
+    this.age = parseInt(this.age *= this.time);
+    this.lifeExp = parseInt(72 * 1.88);
+    if (this.lifeExp > this.age) {
+      let ageLeft = parseInt(this.lifeExp - this.age);
+      this.lifeLeft = `You have ${ageLeft} years left to live!`;
+    } else if (this.age > this.lifeExp) {
+      let ageExcess = this.age - this.lifeExp;
+      this.excessAge = `You've outlived expectations by ${ageExcess} years!`
+    }
+  };
+  jupiterTime() {
+    this.time = 11.86;
+    this.age = parseInt(this.age *= this.time);
+    this.lifeExp = parseInt(72 * 11.86);
+    if (this.lifeExp > this.age) {
+      let ageLeft = parseInt(this.lifeExp - this.age);
+      this.lifeLeft = `You have ${ageLeft} years left to live!`;
+    } else if (this.age > this.lifeExp) {
+      let ageExcess = this.age - this.lifeExp;
+      this.excessAge = `You've outlived expectations by ${ageExcess} years!`
+    }
+  };
 };
