@@ -13,7 +13,7 @@ export default class Planet {
     if (this.lifeExp > this.age) {
       let ageLeft = parseInt(this.lifeExp - this.age);
       this.lifeLeft = `You have ${ageLeft} years left to live!`;
-    } else if (this.age > this.lifeExp) {
+    } else {
       let ageExcess = this.age - this.lifeExp;
       this.excessAge = `You've outlived expectations by ${ageExcess} years!`
     }
@@ -25,7 +25,7 @@ export default class Planet {
     if (this.lifeExp > this.age) {
       let ageLeft = parseInt(this.lifeExp - this.age);
       this.lifeLeft = `You have ${ageLeft} years left to live!`;
-    } else if (this.age > this.lifeExp) {
+    } else {
       let ageExcess = this.age - this.lifeExp;
       this.excessAge = `You've outlived expectations by ${ageExcess} years!`
     }
@@ -37,7 +37,7 @@ export default class Planet {
     if (this.lifeExp > this.age) {
       let ageLeft = parseInt(this.lifeExp - this.age);
       this.lifeLeft = `You have ${ageLeft} years left to live!`;
-    } else if (this.age > this.lifeExp) {
+    } else {
       let ageExcess = this.age - this.lifeExp;
       this.excessAge = `You've outlived expectations by ${ageExcess} years!`
     }
@@ -49,7 +49,7 @@ export default class Planet {
     if (this.lifeExp > this.age) {
       let ageLeft = parseInt(this.lifeExp - this.age);
       this.lifeLeft = `You have ${ageLeft} years left to live!`;
-    } else if (this.age > this.lifeExp) {
+    } else {
       let ageExcess = this.age - this.lifeExp;
       this.excessAge = `You've outlived expectations by ${ageExcess} years!`
     }
