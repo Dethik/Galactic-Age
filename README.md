@@ -29,7 +29,7 @@ This project will calculate a given age's life expectancy, current age, how far 
 * Make first commit only adding .gitignore to commit
 * Open new repo to begin npm initilization
 
-### Npm Initilization
+### Npm Initialization
 
 * Verify package.json has correct npm packages for needs
 * Modify title on line 18 of webpack.config.js
